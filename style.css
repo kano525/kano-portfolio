@@ -318,7 +318,10 @@ footer::before {
   footer { flex-direction: column; gap: 20px; text-align: center; }
   .footer-copy { position: static; transform: none; }
   #hero { overflow: hidden; }
-  .hero-en { font-size: 5.625rem; }
+}
+@media (max-width: 700px) {
+  .hero-en { font-size: 4rem; }
+  .hero-copy { font-size: 1rem; }
 }
 @media (max-width: 600px) {
   .service-grid { grid-template-columns: 1fr; }

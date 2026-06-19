@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service | Kano Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Pinyon+Script&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -17,8 +17,20 @@
       <li><a href="service.html">Service</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
-
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav__list">
+      <li><a href="works.html">Works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
   <div class="page-hero">
     <div class="container">
       <p class="sec-label">Service</p>
@@ -109,10 +121,11 @@
     <a href="index.html" class="footer-logo">Kano Miyaguchi</a>
     <span class="footer-copy">© 2026 Kano. All rights reserved.</span>
     <div class="footer-links">
-      <a href="#">Instagram</a>
+      <a href="https://www.instagram.com/kano.webdesign" target="_blank" rel="noopener">Instagram</a>
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
 

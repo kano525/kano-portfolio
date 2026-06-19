@@ -1,23 +1,23 @@
+﻿/* ─── ハンバーガーメニュー ─── */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-open');
+    mobileNav.classList.toggle('is-open');
+    document.body.style.overflow = mobileNav.classList.contains('is-open') ? 'hidden' : '';
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('is-open');
+      mobileNav.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+  });
+}
 /* ==============================================
    マイポートフォリオ — main.js
    ============================================== */
-
-/* ─── スキルバー アニメーション（about.html） ─── */
-const skillSection = document.querySelector('#skill');
-if (skillSection) {
-  const skillObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-          bar.style.animation = 'none';
-          void bar.offsetHeight; // reflow
-          bar.style.animation = 'fillBar 1.4s ease forwards';
-        });
-      }
-    });
-  }, { threshold: 0.2 });
-  skillObserver.observe(skillSection);
-}
 
 /* ─── お問い合わせフォーム 送信処理（contact.html） ─── */
 function handleSubmit(e) {
